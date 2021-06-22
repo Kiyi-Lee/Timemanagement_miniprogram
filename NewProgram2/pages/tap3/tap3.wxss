@@ -1,0 +1,133 @@
+/* pages/tap3/tap3.wxss */
+page {
+  background-image: url(https://636c-cloud1-6g5wybika29da54a-1305336167.tcb.qcloud.la/pictures/bg3.jpg?sign=8b28f10…&t=1620122857);
+  background-size: 100% auto;
+  background-position: left bottom;
+  overflow: hidden;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-content: center;
+}
+.header {
+    display: flex;
+    flex: 1;
+    width: 90%;
+    height: 10%;
+    align-items: center;
+    border: 1rpx solid #eee;
+    border-radius: 10rpx;
+    box-shadow: 1rpx 1rpx 5rpx #eee;
+    margin: 30rpx 50rpx;
+    padding: 20rpx;
+}
+.addimg  {
+  height: 60rpx;
+  width: 60rpx;
+  vertical-align: middle;
+  padding-bottom: 13rpx;
+}
+.remove image ,.tick image {
+  height: 60rpx;
+  width: 60rpx;
+  vertical-align: middle;
+  padding-bottom: 13rpx;
+}
+.header .plus {
+  width: 41rpx;
+  height: 41rpx;
+  margin-right: 20rpx;
+}
+
+.header .new-todo {
+  flex: 1;
+  font-size: 28rpx;
+  color: #000;
+}
+.todos {
+  display: block;
+    flex: 1;
+    width: 95%;
+    height: 70%;
+    margin: 0 50rpx;
+}
+
+.todos .item {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 25rpx;
+  margin: 10rpx 0;
+  border: 1rpx solid #eee;
+  border-radius: 10rpx;
+}
+
+
+.todos .item .checkbox {
+  margin-right: 20rpx;
+}
+
+.todos .item .name {
+  flex: 1;
+  font-size: 30rpx;
+  color: #142929;
+}
+
+.todos .item.completed .name {
+  text-decoration: line-through;
+  color: #1917179c;
+}
+.remove , .tick , .addimg{
+  color: #1b1a1f;
+}
+.tick ,.addimg{
+  margin-right: 20rpx;
+}
+.footer {
+  flex: 1;
+  display: flex;
+  justify-content: space-between;
+  margin: 30rpx 0;
+  padding: 0 10rpx;
+  font-size: 26rpx;
+  color: #777;
+  height: 30%;
+}
+.footer text {
+  border: 1px solid #ccc;
+  border-radius: 15rpx;
+  text-align: center;
+  margin: 0 24rpx;
+  padding:11rpx 18rpx ;
+  background-color: #eee;
+  color: black;
+
+}
+.footer text:nth-child(3){
+  flex: 2;
+}
+.footer .notfinsh {
+  border: 1px solid #ccc;
+  border-radius: 15rpx;
+}
+.empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.empty .content {
+  position: fixed;
+  width: 100%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
+  color: #666;
+  text-align: center;
+}

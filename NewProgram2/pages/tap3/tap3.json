@@ -1,0 +1,7 @@
+{
+  "usingComponents": {},
+  "navigationBarTitleText": "待办清单",
+  "backgroundTextStyle": "light",
+  "navigationBarBackgroundColor": "#ecebf0",
+  "navigationBarTextStyle": "black"
+}

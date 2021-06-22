@@ -1,0 +1,130 @@
+/* pages/tap6/tap6.wxss */
+page {
+  background-image: url('https://636c-cloud1-6g5wybika29da54a-1305336167.tcb.qcloud.la/pictures/rank_bg2.jpg?sign=da78ff978a6e4d3c3a98542dcd0a2bc3&t=1621687339');
+  background-size: 100% auto;
+  background-position: left bottom;
+  overflow: hidden;
+}
+.rankboard {
+  margin: 0 auto;
+  width: 100%;
+  /* font-size: 36rpx; */
+}
+.notes {
+  font-size: 34rpx;
+  height: 50rpx;
+  line-height: 90rpx;
+  margin-top: 30rpx;
+  color: #2e5d3de0;
+}
+.getInfoBtn {
+  width: 360rpx !important;
+  height: 88rpx;
+  margin: 0 auto;
+  line-height: 44rpx;
+  color: #713dce;
+  background-color: transparent;
+  border: 4rpx solid #ba4e27;
+  border-radius: 20rpx;
+}
+.refreshShare {
+  width: 100%;
+}
+/* .shareImg {
+  margin-right: 70rpx;
+} */
+.refresh {
+  margin: center;
+  margin-top: 30rpx;
+  color: #3f51b5;
+  border: 1px solid;
+  border-radius: 5px;
+  width: 200rpx !important;
+  font-size: 36rpx;
+  line-height: 36rpx;
+  background-color: transparent;
+}
+.detail_title_type {
+  flex: 1;
+  text-align: right;
+  font-size: 35rpx;
+}
+.detail_title_type text {
+  border: 1px solid #ccc;
+  border-radius: 15rpx;
+  text-align: center;
+  margin: 5rpx 10rpx;
+  padding: 2rpx 18rpx;
+  background-color: #fff7f7;
+  /* color: black; */
+}
+.active {
+  color: #42e4e4;
+}
+.title {
+  display: block;
+  height: 66rpx;
+  width: 100%;
+  line-height: 66rpx;
+  margin-bottom: 10px;
+  border-bottom: 2px solid #986198b0;
+  font-size: 25rpx;
+  margin-top: 30rpx;
+}
+.t_detail {
+  text-align: center;
+  display: flex;
+  margin-left: 3%
+}
+.t_rank {
+  width: 8%;
+}
+.t_img {
+  width: 15%;
+}
+.t_username {
+  width: 25%;
+}
+.t_attentionTimeToday {
+  width: 26%;
+}
+.t_attentionTimeTotal {
+  width: 26%;
+}
+.showlist {
+  display: block;
+  height: 72rpx;
+  width: 100%;
+  line-height: 72rpx;
+  margin-bottom: 10px;
+  border-bottom: 1.3px solid #caa9bb;
+  font-size: 25rpx;
+  font-weight: 500;
+}
+.showlist text {
+  margin: 0 auto;
+  /* color: rgb(77, 238, 184); */
+}
+.detail {
+  text-align: center;
+  display: flex;
+  margin-left: 3%
+}
+.rank ,.username ,.attentionTimeToday ,.attentionTimeTotal{
+  color: #252225;
+}
+.rank {
+  width: 8%;
+}
+.img {
+  width: 15%;
+}
+.username {
+  width: 25%;
+}
+.attentionTimeToday {
+  width: 26%;
+}
+.attentionTimeTotal {
+  width: 26%;
+}

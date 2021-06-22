@@ -1,0 +1,7 @@
+<!--pages/tap4/tap4.wxml-->
+<view class="container">
+  <view class="testonline">
+    <button class="upload" bindtap="upload"><text>上传到云端</text></button>
+    <button class="pace" bindtap="pace"><text>同步到本地</text></button>
+  </view>
+</view>

@@ -1,0 +1,172 @@
+page {
+  background-image: url(https://636c-cloud1-6g5wybika29da54a-1305336167.tcb.qcloud.la/pictures/bg13.jpg?sign=07d0f67…&t=1621688439);
+  background-size: 100% auto;
+  background-position: left bottom;
+  overflow: hidden;
+}
+
+#editor1 ,#editor2 ,#editor3 ,#editor4 {
+  color: rgb(10 0 0);
+  font-weight: 400;
+  font-size: 32rpx;
+}
+
+.box {
+  height: 100%;
+  width: 100%;
+}
+
+.view1 {
+  width: 100%;
+  height: 360rpx;
+  display: flex;
+}
+
+.Editor1 {
+  width: 50%;
+  height: 360rpx;
+  padding: left;
+  background-color: cyan;
+}
+
+.Editor2 {
+  width: 50%;
+  height: 360rpx;
+  padding: right;
+  background-color: rgb(243, 245, 114);
+}
+
+.view2 {
+  width: 100%;
+  height: 360rpx;
+  display: flex;
+}
+
+.Editor3 {
+  width: 50%;
+  height: 360rpx;
+  padding: left;
+  background-color: palevioletred;
+}
+
+.Editor4 {
+  width: 50%;
+  height: 360rpx;
+  padding: right;
+  background-color: palegreen;
+}
+
+.title1,
+.title2 {
+  width: 100%;
+  height: 60rpx;
+  display: flex;
+}
+
+.titledisplay1 {
+  width: 50%;
+  height: 60rpx;
+  background: cyan;
+  text-align: right;
+  font-size: 32rpx;
+  line-height: 60rpx;
+}
+
+.titledisplay2 {
+  text-align: left;
+  width: 50%;
+  height: 60rpx;
+  background: rgb(243, 245, 114);
+  font-size: 32rpx;
+  line-height: 60rpx;
+}
+
+.titledisplay3 {
+  width: 50%;
+  height: 60rpx;
+  background: palevioletred;
+  text-align: right;
+  font-size: 32rpx;
+  line-height: 60rpx;
+}
+
+.titledisplay4 {
+  width: 50%;
+  height: 60rpx;
+  background: palegreen;
+  text-align: left;
+  font-size: 32rpx;
+  line-height: 60rpx;
+}
+
+.return {
+
+  width: 200rpx !important;
+  height: 100rpx;
+  text-align: center;
+  margin: center;
+  margin-right: 50rpx;
+  background: transparent;
+  border: 4rpx solid black;
+  font-weight: 400;
+}
+
+.btn {
+  width: 200rpx !important;
+  height: 100rpx;
+  text-align: center;
+  margin-top: 35rpx;
+  border: 4rpx solid black;
+  font-weight: 400;
+  background-color: transparent
+}
+
+.detail-page {
+  width: 100%;
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+page-container {
+  background-color: #eee;
+}
+
+page-container .img {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  justify-self: flex-start;
+  background-color: #e9e8e6;
+}
+
+page-container .img image {
+  width: 100%;
+  flex: 30%;
+  vertical-align: middle;
+}
+
+page-container text {
+  flex: 70%;
+  padding: 0 5rpx;
+  font-size: 34rpx;
+  text-align: left;
+}
+
+.close {
+  width: 200rpx !important;
+  height: 100rpx;
+  text-align: center;
+  margin: center;
+  margin-right: 50rpx;
+  background: transparent;
+  border: 4rpx solid black;
+  font-weight: 400;
+}
+
+.blank {
+  padding-top: 60rpx;
+}

@@ -1,0 +1,45 @@
+/* pages/tap4/tap4.wxss */
+.page-body {
+  text-align: center;
+}
+
+page {
+  background-image: url('https://636c-cloud1-6g5wybika29da54a-1305336167.tcb.qcloud.la/pictures/bg21.jpg?sign=4f04065f76e88162de334b1a6401a4f5&t=1621686970');
+  background-size: 750rpx auto;
+  background-position: left bottom;
+}
+
+.testonline {
+  width: 100%;
+  height: 200rpx;
+  display:block;
+  margin-top: 56rpx;
+}
+
+.upload {
+  width: 300rpx !important;
+  height: 66rpx;
+  padding: 0;
+  color: black;
+  background-color: transparent;
+  border: 4rpx solid darkkhaki;
+  border-radius: 20rpx;
+}
+
+.pace {
+  width: 300rpx !important;
+  height: 66rpx;
+  padding: 0;
+  color: black;
+  background-color: transparent;
+  border: 4rpx solid darkkhaki;
+  border-radius: 20rpx;
+  margin-top:46rpx;
+  padding: 0;
+}
+
+.upload ,.pace text{
+  font-size: 36rpx;
+  line-height: 66rpx;
+  text-align: center;
+}

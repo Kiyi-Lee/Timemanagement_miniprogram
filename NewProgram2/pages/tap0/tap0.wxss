@@ -1,0 +1,69 @@
+/* pages/tap4/tap4.wxss */
+/* page{
+background-color: #d3d2ec;
+border-top: 2rpx solid #eee;
+} */
+page {
+  background-image:url('https://636c-cloud1-6g5wybika29da54a-1305336167.tcb.qcloud.la/pictures/bg26.jpg?sign=c3ba4e6433657c0ae82a184d4faba340&t=1622213038');
+  background-size: 100% auto;
+  background-position: left bottom;
+  overflow: hidden;
+}
+.movebox {
+  height: 40rpx;
+  line-height: 40rpx;
+}
+
+.movebox image {
+  float: left;
+  height: 60rpx;
+  width: 60rpx;
+  margin-left: 10rpx;
+}
+.movebox text {
+  font-size: 20rpx;
+  color: #fffdfd;
+  margin-left: 36rpx;
+}
+.display {
+  width: 100%;
+  background: transparent;
+  display: flex;
+}
+.btn1 {
+  background: #efe4eb6b;
+  width: 360rpx !important;
+  height: 90rpx;
+  font-size: 30rpx;
+  line-height: 45rpx;
+}
+.chooseBoard{
+  width: 660rpx;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+ /* height: 330rpx; */
+}
+.chooseBoard .cate_item{
+  width: 220rpx;
+  height: 200rpx;
+  text-align: center;
+  margin-bottom: 10rpx;
+}
+.chooseBoard .cate_item .cate_icon{
+  height: 150rpx;
+  margin-bottom: 12rpx;
+}
+.chooseBoard .cate_item .cate_icon image{
+  width: 150rpx;
+  height: 150rpx;
+}
+.chooseBoard .cate_item .cate_text{
+  height: 36rpx;
+  line-height: 36rpx;
+  font-size: 30rpx;
+  font-style: normal;
+}
+.chooseBoard .cate_item .cate_text_active{
+  color: tomato;
+}

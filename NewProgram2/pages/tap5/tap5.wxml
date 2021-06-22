@@ -1,0 +1,48 @@
+<!--pages/tap6/tap6.wxml-->
+<wxs src="../wxs/substr.wxs" module="tools" />
+<view class="container">
+  <view class="userinfo" hidden="{{showgetUserinfo}}">
+    <text class="notes">请点击下方按钮，用于排行榜信息展示</text>
+    <block wx:if="{{!hasUserInfo}}">
+      <button wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile" class="getInfoBtn"> 获取头像昵称 </button>
+      <button wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo" class="getInfoBtn"> 获取头像昵称 </button>
+    </block>
+    <!-- <block wx:else>
+      <image bindtap="bindViewTap" class="userinfo-avatar" src="{{userInfo.avatarUrl}}" mode="cover" style="width:120rpx;height:120rpx"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block> -->
+  </view>
+  <view class="rankboard" hidden="{{!showgetUserinfo}}">
+    <view class="refreshShare" style="display:flex">
+      <button class="refresh" bindtap="refresh">刷新</button>
+      <!-- <image class="shareImg" src="/images/arrow3.png" style="width:66rpx;height:66rpx"/> -->
+    </view>
+    <view class="detail_title_type">
+      <text class="{{actionIndex == 0 ?'active':''}} today" data-index="0" bindtap="changeType">日榜</text>
+      <text class="{{actionIndex == 1 ?'active':''}} history" data-index="1" bindtap="changeType">总榜</text>
+    </view>
+    <view class="title">
+      <view class="t_detail">
+        <view class="t_rank">排名</view>
+        <view class="t_img">头像</view>
+        <view class="t_username">用户</view>
+        <view class="t_attentionTimeToday">今日专注时长</view>
+        <view class="t_attentionTimeTotal">累计专注时长</view>
+      </view>
+    </view>
+    <scroll-view scroll-y style="height:{{rankHeight*0.75}}rpx;" class="scrollshow">
+      <view class="showlist" wx:for="{{actionIndex==0 ? allRecords:rankbytotal}}" wx:key="allRecords"
+        data-index="{{index}}">
+        <view class="detail">
+          <view class="rank" style="color:{{index==0 ?'#c55533':'#252225'}};">[{{index+1}}]</view>
+          <view class="img">
+            <image src="{{item.headpictureUrl}}" style="width:60rpx;height:60rpx"></image>
+          </view>
+          <view class="username">{{tools.sub(item.nickname)}}</view>
+          <view class="attentionTimeToday">{{item.attentionTimeToday}}min</view>
+          <view class="attentionTimeTotal">{{item.attentionTimeTotal}}min</view>
+        </view>
+      </view>
+    </scroll-view>
+  </view>
+</view>
