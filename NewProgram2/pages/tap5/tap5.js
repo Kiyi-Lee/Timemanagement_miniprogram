@@ -21,6 +21,22 @@ Page({
       menus: ['shareAppMessage', 'shareTimeline']
     })
   },
+  async getRank(){
+    const db = wx.cloud.database()
+    //获取数据的总个数
+    let count = await db.collection('userInfos').orderBy('attentionTimeToday','desc').count()
+    count = count.total
+    let all = []
+    //通过for循环做多次请求，并把多次请求的数据放在应该数组里
+    for (let i=0; i<count ;i+=20){
+      let list = await db.collection('userInfos').orderBy('attentionTimeToday','desc').skip(i).get()
+      all = all.concat(list.data);
+    }
+    // console.log("ALL"+all)
+    this.setData({
+      allRecords : all
+    })
+  },
   onShow() {
     var res=wx.getSystemInfoSync();
     var rate=750 /res.windowWidth;
@@ -46,25 +62,8 @@ Page({
     })
     const db = wx.cloud.database()
     const _ = db.command
-    var that = this
-    db.collection('userInfos').orderBy('attentionTimeToday','desc').count().then(async res =>{
-      let total = res.total;
-      // 计算需分几次取
-      const MAX_LIMIT = 100
-      const batchTimes = Math.ceil(total / MAX_LIMIT)
-      // 承载所有读操作的 promise 的数组
-      for (let i = 0; i < batchTimes; i++) {
-        await db.collection('userInfos').orderBy('attentionTimeToday','desc').skip(i * MAX_LIMIT).limit(MAX_LIMIT).get().then(async res => {
-          let new_data = res.data
-          let old_data = that.data.allRecords
-        // arr = arr.sort(compare('age'));
-          that.setData({
-            allRecords : old_data.concat(new_data),
-          })
-        })
-      }
-      // console.log(that.data.allRecords)
-    })
+    this.getRank()
+
     // function compare(arg) {
     //   return function(a, b) {
     //       return a[arg] - b[arg];
@@ -200,7 +199,7 @@ Page({
                 })
                 // console.log("2.3")
               }
-              this.showToast();
+              that.showToast();
             }
           })
         },

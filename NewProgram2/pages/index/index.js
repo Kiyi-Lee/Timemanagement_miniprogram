@@ -12,7 +12,7 @@ Page({
     clockmusic:false,
     clockShow:false,
     clockHeight:0,
-    time: '1',//单次番茄时长
+    time: '30',//单次番茄时长
     cateActive: 0,
     rate:"",
     mtime:1200000,

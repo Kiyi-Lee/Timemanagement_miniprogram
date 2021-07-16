@@ -42,8 +42,8 @@
   height: 70rpx;
 } */
 .chooseBoard .cate_item .cate_icon image{
-  width: 140rpx;
-  height: 140rpx;
+  width: 125rpx;
+  height: 125rpx;
 }
 .chooseBoard .cate_item .cate_text{
   height: 60rpx;
@@ -55,13 +55,4 @@
 .chooseBoard .cate_item .cate_text_active{
   color: tomato;
 }
-.start{
-  width: 300rpx;
-  height: 90rpx;
-  border: 2rpx solid red;
-  border-radius: 20rpx;
-  line-height: 90rpx;
-  color: red;
-  text-align: center;
-  margin: 20rpx auto;
-}
+

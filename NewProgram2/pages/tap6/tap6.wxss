@@ -1,0 +1,11 @@
+/* pages/tap6/tap6.wxss */
+.test {
+  width: 200rpx;
+  height: 200rpx;
+  background-color: burlywood;
+}
+.demo {
+  width: 100%;
+  height: 100%;
+  background-color: blanchedalmond;
+}

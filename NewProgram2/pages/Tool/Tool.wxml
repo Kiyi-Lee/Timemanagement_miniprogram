@@ -1,39 +1,13 @@
 <!--pages/Tool/Tool.wxml-->
-<view class="table" hidden="{{cutdownShow}}">
+<view class="table">
 
-<view class="chooseBoard">
-  <view class="title">
-  请点击图标，选择项目
-</view> 
+  <view class="chooseBoard">
+    <view class="title">请点击图标，选择项目</view>
     <view wx:for="{{boardArr}}" class='cate_item' wx:key="cate" bindtap="clickCate" data-index="{{index}}">
-      <view class="cate_icon"><image src="../../images2/{{item.icon}}.png"></image></view>
+      <view class="cate_icon">
+        <image src="../../images2/{{item.icon}}.png"></image>
+      </view>
       <view class="cate_text {{index == cateActive ? 'cate_text_active' :''}}">{{item.text}}</view>
     </view>
   </view>
-</view>
-
-<view class="canlendarBgView" hidden="!cutdownShow">
- <view class="canlendarView">
-  <view class="canlendarTopView">
-   <view class="leftBgView" bindtap="handleCalendar" data-handle="prev">
-    <view class="leftView">《</view>
-   </view>
-   <view class="centerView">{{cur_year || "--"}} 年 {{cur_month || "--"}} 月</view>
-   <view class="rightBgView" bindtap="handleCalendar" data-handle="next">
-    <view class="rightView">》</view>
-   </view>
-  </view>
-  <view class="weekBgView">
-   <view class="weekView" wx:for="{{weeks_ch}}" wx:key="{{index}}" data-idx="{{index}}">{{item}}</view>
-  </view>
-  <view class="dateBgView">
-   <view wx:if="{{hasEmptyGrid}}" class="dateEmptyView" wx:for="{{empytGrids}}" wx:key="{{index}}" data-idx="{{index}}">
-   </view>
-   <view class="dateView" wx:for="{{days}}" wx:key="{{index}}" data-idx="{{index}}" bindtap="dateSelectAction">
-    <view class="datesView {{index == todayIndex ? 'dateSelectView' : ''}}">{{item}}</view>
-   </view>
-  </view>
- </view>
- <view>点击日期选择</view>
- <view class="return" bindtap="return">返回</view>
 </view>

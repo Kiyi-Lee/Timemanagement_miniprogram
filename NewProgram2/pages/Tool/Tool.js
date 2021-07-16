@@ -31,6 +31,10 @@ Page({
         icon:'rank6',
         text:'排行榜',
       }, 
+      {
+        icon:'tips',
+        text:'使用贴士',
+      }, 
     ]
   },
   onLaunch: function () {
