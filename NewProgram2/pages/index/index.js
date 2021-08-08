@@ -3,10 +3,11 @@
 const util = require('../../utils/util.js')
 const ringAudio = wx.createInnerAudioContext()
 const app = getApp()
-const appData = app.globalData
+const boardArr = app.globalData.boardArr
 
 Page({
   data: {
+    showmodal: false,
     attentionTimeToday: 0,
     attentionTimeTotal: 0,
     clockmusic:false,
@@ -19,35 +20,11 @@ Page({
     timer:null,
     lastTime:'0',
     test:[],
-    boardArr:[
-      {
-        icon:'work',
-        text:'工作'
-      },
-      {
-        icon:'study',
-        text:'学习',
-      },
-      {
-        icon:'think',
-        text:'思考',
-      },
-      {
-        icon:'write',
-        text:'写作',
-      },
-      {
-        icon:'sport',
-        text:'运动',
-      },
-      {
-        icon:'read',
-        text:'阅读',
-      }
-    ],
     okShow:false,
     pauseShow:true,
     continueCancleShow:false,
+    boardArr:[],
+    text:'自定义'
   },
   //事件处理函数
   bindViewTap: function() {
@@ -64,6 +41,46 @@ Page({
     this.setData({
       cateActive: e.currentTarget.dataset.index,
     });
+    if( e.currentTarget.dataset.index==5){
+      this.setData({
+        showmodal: true
+      })
+    }
+  },
+  setText: function(e) {
+    var text = e.detail.value
+    this.setData({
+      text: text
+    })
+    // boardArr[5].text = this.data.text
+  },
+  cancel: function(){
+    this.setData({
+      showmodal: false
+    })
+  },
+  confirm: function(){
+    if(this.data.text.length<=1 || this.data.length>6)
+    {
+      wx.showToast({
+        title: '长度不正确',
+        image: '../../images/wrong2.png',
+        duration: 1200
+      })
+      setTimeout(function () {
+        wx.hideToast()
+      }, 2000)
+    }else{
+      this.setData({
+        showmodal: false,
+        ['boardArr[5].text']: this.data.text
+      })
+    }
+  },
+  showCustom: function(){
+    this.setData({
+      showmodal: true
+    })
   },
   start: function(){
     this.setData({
@@ -122,7 +139,7 @@ Page({
           var tests=wx.getStorageSync('tests') || [];
           tests.unshift({
             date:util.formatTime(new Date),
-            cate:_this.data.cateActive,
+            cate:_this.data.cateActive==5?boardArr[5].text:_this.data.cateActive,
             time:_this.data.time,
           })
           wx.setStorageSync('tests', tests);
@@ -262,7 +279,8 @@ Page({
     var cHeight=rate*res.windowHeight;
     this.setData({
       rate:750 / res.windowWidth,
-      clockHeight:cHeight
+      clockHeight:cHeight,
+      boardArr: boardArr
     })
   },
 })

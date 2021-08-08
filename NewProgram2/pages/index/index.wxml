@@ -17,6 +17,13 @@
     </view>
   </view>
 
+<modal id = "modal" hidden = "{{!showmodal}}"
+title = "自定义" confirm-text = "提交" cancel-text = "取消"
+bindcancel = "cancel" bindconfirm = "confirm" > 
+<input type = 'text' placeholder = '请输入······' placeholder-class="holderstyle" maxlength="6" bindblur="setText" style="color:black"/> 
+<text class="tips">tips:字符长度控制在2~6之间</text>
+</modal>
+
   <view class="startAttention" bindtap="start">
    <image src="../../images2/start.png"> </image> 开始专注
   </view>

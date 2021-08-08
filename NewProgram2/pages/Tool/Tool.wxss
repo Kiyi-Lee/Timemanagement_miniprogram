@@ -42,8 +42,8 @@
   height: 70rpx;
 } */
 .chooseBoard .cate_item .cate_icon image{
-  width: 125rpx;
-  height: 125rpx;
+  width: 130rpx;
+  height: 130rpx;
 }
 .chooseBoard .cate_item .cate_text{
   height: 60rpx;

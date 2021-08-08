@@ -1,4 +1,5 @@
 <!--logs.wxml-->
+<wxs src="../wxs/substring.wxs" module="tools" />
 <view class="sum">
   <view class="sum_item" wx:for="{{sum}}" wx:key="Nu">
     <view class="sum_item_title">{{item.title}}</view>
@@ -18,7 +19,7 @@
   <scroll-view scroll-y style="height:{{logsHeight*0.6}}rpx;" class="detail_list" wx:if="{{list.length > 0}}">
     <view class="list_item" wx:for="{{list}}" wx:key="list" wx:if="{{item.time !=null}}">
       <view class="list_item_date">{{item.date}}</view>
-      <view class="list_item_cate">{{boardArr[item.cate].text}}</view>
+      <view class="list_item_cate">{{tools.sub(item.cate)==0?item.cate:boardArr[item.cate].text}}</view>
       <view class="list_item_time">{{item.time}}分钟</view>
     </view>
   </scroll-view>

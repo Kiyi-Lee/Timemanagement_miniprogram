@@ -211,8 +211,12 @@ Page({
   showToast : function(){
     wx.showToast({
       image: '/images2/right6.png',
-      title: '刷新成功'
+      title: '刷新成功',
+      duration: 1200
     })
+    setTimeout(function () {
+      wx.hideToast()
+    }, 2000)
   },
 
   onShareAppMessage() {

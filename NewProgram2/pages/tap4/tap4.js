@@ -30,6 +30,7 @@ Page({
               // console.log(res.data[0].todos+res.data[0].table)
               // test = res.data[0].todos || []
               var todos = wx.getStorageSync('todo_list') || []
+              var todos2 = wx.getStorageSync('todo_list2') || []
               var usedCloths = wx.getStorageSync('usedCloth') || []
               var cutdownLogs = wx.getStorageSync('cutdownLogs') || []
               var tests = wx.getStorageSync('tests') || []
@@ -42,6 +43,8 @@ Page({
                 //   title: '数据已同步'
                 // })
               if (todos) {todos = res.data[0].todos || [];wx.setStorageSync('todo_list', todos);                
+              }
+              if (todos2) {todos2 = res.data[0].todos2 || [];wx.setStorageSync('todo_list2', todos2);                
               }
               if (usedCloths) {usedCloths = res.data[0].usedCloths || [];wx.setStorageSync('usedCloth', usedCloths)}
               if (cutdownLogs) {cutdownLogs = res.data[0].cutdownLogs || [];wx.setStorageSync('cutdownLogs', cutdownLogs)}
@@ -71,6 +74,7 @@ Page({
   //上传
   upload: function () {
     var todos = wx.getStorageSync('todo_list') || []
+    var todos2 = wx.getStorageSync('todo_list2') || []
     var usedCloths = wx.getStorageSync('usedCloth') || []
     var cutdownLogs = wx.getStorageSync('cutdownLogs') || []
     var tests = wx.getStorageSync('tests') || []
@@ -83,6 +87,7 @@ Page({
     var picChoosesflag = 0
     var contentsflag = 0
     var todosflag = 0
+    var todos2flag = 0
     var usedClothsflag = 0
     var cutdownLogsflag = 0
     var testsflag = 0
@@ -97,6 +102,7 @@ Page({
     if(picChooses!=0){picChoosesflag=1}
     if(contents.length>0){contentsflag=1}
     if(todos.length>0){todosflag=1}
+    if(todos2.length>0){todos2flag=1}
     if(usedCloths.length>0){usedClothsflag=1}
     if(cutdownLogs.length>0){cutdownLogsflag=1}
     if(tests.length>0){testsflag=1}
@@ -135,6 +141,7 @@ Page({
                       picChooses: picChoosesflag==0?0:picChooses,
                       contents: contentsflag==0?[]:contents,
                       todos: todosflag==0?[]:todos,
+                      todos2: todos2flag==0?[]:todos2,
                       usedCloths: usedClothsflag==0?[]:usedCloths,
                       cutdownLogs: cutdownLogsflag==0?[]:cutdownLogs,
                       tests: testsflag==0?[]:tests,
@@ -155,6 +162,7 @@ Page({
                       picChooses: picChoosesflag==0?0:picChooses,
                       contents: contentsflag==0?[]:contents,
                       todos: todosflag==0?[]:todos,
+                      todos2: todos2flag==0?[]:todos2,
                       usedCloths: usedClothsflag==0?[]:usedCloths,
                       cutdownLogs: cutdownLogsflag==0?[]:cutdownLogs,
                       tests: testsflag==0?[]:tests,

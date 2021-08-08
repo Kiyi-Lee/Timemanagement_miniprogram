@@ -102,23 +102,23 @@ page {
 .return {
 
   width: 200rpx !important;
-  height: 100rpx;
+  height: 90rpx;
   text-align: center;
-  margin: center;
-  margin-right: 50rpx;
+  line-height: 45rpx;
   background: transparent;
   border: 4rpx solid black;
   font-weight: 400;
 }
 
 .btn {
+  margin-top: 36rpx;
   width: 200rpx !important;
-  height: 100rpx;
+  height: 90rpx;
   text-align: center;
-  margin-top: 35rpx;
+  line-height: 45rpx;
+  background: transparent;
   border: 4rpx solid black;
   font-weight: 400;
-  background-color: transparent
 }
 
 .detail-page {
@@ -158,11 +158,11 @@ page-container text {
 
 .close {
   width: 200rpx !important;
-  height: 100rpx;
-  text-align: center;
-  margin: center;
-  margin-right: 50rpx;
-  background: transparent;
+  height: 90rpx;
+  color: #020202;
+  line-height: 45rpx;
+  margin-top: 20rpx;
+  background: #91d4f3;
   border: 4rpx solid black;
   font-weight: 400;
 }

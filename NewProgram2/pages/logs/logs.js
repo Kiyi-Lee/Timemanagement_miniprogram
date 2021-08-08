@@ -1,5 +1,7 @@
 //logs.js
 const util = require('../../utils/util.js')
+const app = getApp()
+const boardArr = app.globalData.boardArr
 
 Page({
   data: {
@@ -26,32 +28,7 @@ Page({
         val:'0分钟',
       },
     ],
-    boardArr:[
-      {
-        icon:'work',
-        text:'工作'
-      },
-      {
-        icon:'study',
-        text:'学习',
-      },
-      {
-        icon:'think',
-        text:'思考',
-      },
-      {
-        icon:'write',
-        text:'写作',
-      },
-      {
-        icon:'sport',
-        text:'运动',
-      },
-      {
-        icon:'read',
-        text:'阅读',
-      }
-    ],
+    boardArr: [],
     showHeight: 0,
   },
   onLaunch: function () {
@@ -61,6 +38,10 @@ Page({
     })
   },
   onShow: function () {
+    this.pushlist()
+    this.setData({
+      boardArr: boardArr
+    })
     var res=wx.getSystemInfoSync();
     var rate=750 /res.windowWidth;
     var lHeight=rate*res.windowHeight;
@@ -110,19 +91,27 @@ Page({
   },
   changeType: function(e){
     var index=e.currentTarget.dataset.index;
-    if(index==0){
-      this.setData({
-        list:this.data.dayList,
-      }) 
-    }else if(index==1){
-      var tests=wx.getStorageSync('tests') || [];
-      this.setData({
-        list:tests,
-      })
-    }
     this.setData({
       actionIndex:index,
     })
+    this.pushlist();
+  },
+  pushlist: function() {
+    var that = this
+    if(that.data.actionIndex==0){
+      that.setData({
+        list:that.data.dayList,
+      }) 
+    }else if(that.data.actionIndex!=0){
+      wx.getStorage({
+        key: 'tests',
+        success (res) {
+          that.setData({
+            list:res.data,
+          })
+        }
+      })
+    }
   },
   onShareAppMessage() {
     const promise = new Promise(resolve => {

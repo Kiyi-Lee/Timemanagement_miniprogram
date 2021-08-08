@@ -51,13 +51,26 @@
   height: 120rpx;
 }
 .chooseBoard .cate_item .cate_text{
-  height: 40rpx;
-  line-height: 60rpx;
+  height: 35rpx;
+  line-height: 35rpx;
   font-size: 30rpx;
   font-style: normal;
 }
 .chooseBoard .cate_item .cate_text_active{
   color: tomato;
+}
+
+#modal {
+  color: steelblue
+}
+
+.holderstyle {
+  color: teal;
+}
+
+.tips {
+  font-size: 25rpx;
+  color: black;
 }
 
 .startAttention{
@@ -67,7 +80,7 @@
   border-radius: 20rpx;
   line-height: 90rpx;
   color: #666;
-  margin: 36rpx auto;
+  margin: 39rpx auto;
   text-align: center;
 }
 .startAttention image , .pauseBtn image, .okBtn image,.continueBtn image ,.cancleBtn image{

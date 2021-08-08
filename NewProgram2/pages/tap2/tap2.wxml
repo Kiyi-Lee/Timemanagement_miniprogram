@@ -52,11 +52,11 @@
   <view class="detail-page">
     <view class="img">
       <image
-        src="http://m.qpic.cn/psc?/V54SEG1R4QYpan3jCAtq3tUSOa2ECCxB/ruAMsa53pVQWN7FLK88i5uj28GZ0gAm5j6hqEi7TYIh9KyWF4w1SzHTtBjTRxutgum9O1*2PZ923gS3itpg00famnlthhPCZLtdKgjiqP5E!/mnull&bo=9AF3AQAAAAADB6E!&rf=photolist&t=5">
+        src="/images2/四象限.png">
       </image>
-      <text decode="{{true}}" user-select>
-        &nbsp;&nbsp;&nbsp;&nbsp;
-        在人们的日常工作中，很多时候往往有机会去很好地计划和完成一件事。但常常却又没有及时地去做，随着时间的推移，造成工作质量的下降。因此，应把主要的精力有重点地放在重要但不紧急这个“象限”的事务上是必要的。要把精力主要放在重要但不紧急的事务处理上，需要很好地安排时间。一个好的方法是建立预约。建立了预约，自己的时间才不会被别人所占据，从而有效地开展工作。
+      <text decode="{{true}}" user-select style="color:#3187af">
+        <text style="text-indent:2em;margin-left:60rpx">在人们的日常工作中，很多时候往往有机会去很好地计划和完成一件事。但常常却又没有及时地去做，随着时间的推移，造成工作质量的下降。</text>
+        <text style="margin-left:60rpx">  因此，应把主要的精力有重点地放在重要但不紧急这个“象限”的事务上是必要的。要把精力主要放在重要但不紧急的事务处理上，需要很好地安排时间。一个好的方法是建立预约。建立了预约，自己的时间才不会被别人所占据，从而有效地开展工作。</text>
       </text>
       <button class="close" bindtap="close"><text>关闭</text></button>
       <view class="blank"></view>

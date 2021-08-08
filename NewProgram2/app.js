@@ -11,8 +11,35 @@ App({
     })
   },
   globalData: {
+    logscate: 0,
     userInfo: null,
     canConvert:0,
     index:0,
+    boardArr:[
+      {
+        icon:'work',
+        text:'工作'
+      },
+      {
+        icon:'study',
+        text:'学习',
+      },
+      {
+        icon:'think',
+        text:'思考',
+      },
+      {
+        icon:'write',
+        text:'写作',
+      },
+      {
+        icon:'sport',
+        text:'运动',
+      },
+      {
+        icon:'custom',
+        text:'自定义',
+      }
+    ],
   }
 })
