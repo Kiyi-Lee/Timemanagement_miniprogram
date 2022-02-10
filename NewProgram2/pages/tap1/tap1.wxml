@@ -1,6 +1,6 @@
 <!--pages/tap1/tap1.wxml-->
 <view class="cutdown" hidden="{{cutdownShow}}">
-  <view class="view1" style="width: 100%;{{height1}}px;display: block;">
+  <view class="view1" style="width: 100%;display: block;">
     <view class="text" bindtap="setCutdown">设置新的倒数日<text></text></view>
     <view class="return2" bindtap="return2">返回</view>
   </view>

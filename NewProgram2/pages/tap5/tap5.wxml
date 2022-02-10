@@ -41,7 +41,7 @@
           style="width:60rpx;height:60rpx"></image>
           <image class="rank_number3" wx:if="{{index==2}}" src="/images2/rank3.png"
           style="width:60rpx;height:60rpx"></image>
-          <text wx:if="{{index>2}}">[{{index+1}}]</text></view>
+          <text wx:if="{{index>2}}" style="font-size: 25rpx;">[{{index+1}}]</text></view>
           <view class="img">
             <image src="{{item.headpictureUrl}}" style="width:60rpx;height:60rpx"></image>
           </view>

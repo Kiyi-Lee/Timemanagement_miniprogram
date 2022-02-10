@@ -1,2 +1,9 @@
 <!--pages/tap6/tap6.wxml-->
-<div class="test"><span class="demo">demo</span></div>
+<view style="width: {{Width}}rpx;height: {{Height}}rpx;display: block;">
+  <!-- <view>Good Luck！</view> -->
+  <view class="container" style="width:100%;height: 100%;margin-top: 50rpx;">
+    <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"
+    force-use-old-canvas="true"></ec-canvas>
+  </view>
+  <!-- <view style="margin-top: 1000rpx;">Good Luck Again！</view> -->
+</view>

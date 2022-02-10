@@ -9,6 +9,14 @@ page {
   background-position: left bottom;
 }
 
+.score{
+  width:335rpx;
+  border-radius:10rpx 0rpx 0rpx 10rpx;
+ }
+ .score text{
+  color: #FCB216;
+ }
+
 .testonline {
   width: 100%;
   height: 200rpx;
@@ -22,7 +30,7 @@ page {
   padding: 0;
   color: black;
   background-color: transparent;
-  border: 4rpx solid darkkhaki;
+  border: 4rpx solid;
   border-radius: 20rpx;
 }
 
@@ -32,7 +40,7 @@ page {
   padding: 0;
   color: black;
   background-color: transparent;
-  border: 4rpx solid darkkhaki;
+  border: 4rpx solid;
   border-radius: 20rpx;
   margin-top:46rpx;
   padding: 0;

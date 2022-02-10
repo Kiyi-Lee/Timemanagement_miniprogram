@@ -1,7 +1,28 @@
 <!--pages/tap4/tap4.wxml-->
 <view class="container">
   <view class="testonline">
-    <button class="upload" bindtap="upload"><text>上传到云端</text></button>
-    <button class="pace" bindtap="pace"><text>同步到本地</text></button>
+    <view wx:if="{{sty2==0}}">
+      <button class="upload" bindtap="upload" style="border-color: {{score2}};"><text>上传到云端</text></button>
+    </view>
+    <view wx:if="{{sty2==1}}">
+      <button class="upload" bindtap="upload" style="border-color: {{score2}};"><text>上传到云端</text></button>
+    </view>
+    <view wx:if="{{sty==0}}">
+      <button class="pace" bindtap="pace" style="border-color: {{score}};"><text>同步到本地</text></button>
+    </view>
+    <view wx:if="{{sty==1}}">
+      <button class="pace" bindtap="pace" style="border-color: {{score}};"><text>同步到本地</text></button>
+    </view>
+<!-- <view wx:if="{{sty==0}}">
+ <view class="score" style="background-color:{{score}};" catchtap='score'>
+  <text>按钮一</text>
+ </view>
+</view>
+<view wx:if="{{sty==1}}">
+ <view class="score" style="background-color:{{score}};" catchtap='score'>
+  <text>按钮一</text>
+ </view>
+</view> -->
+
   </view>
 </view>

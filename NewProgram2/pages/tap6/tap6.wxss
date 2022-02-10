@@ -1,11 +1,78 @@
-/* pages/tap6/tap6.wxss */
-.test {
-  width: 200rpx;
-  height: 200rpx;
-  background-color: burlywood;
-}
-.demo {
+/* pages/weather/weather.wxss */
+ec-canvas {
   width: 100%;
-  height: 100%;
-  background-color: blanchedalmond;
-}
+  height: 70%;
+  }
+   
+  .container {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+  }
+   
+  /* .picker-pos {
+  margin-top: -130rpx;
+  margin-left: 150rpx;
+  color: red;
+  } */
+   
+   
+  /* .head {
+    overflow: hidden;
+    margin: 10rpx;
+  }
+   
+  .head_config {
+    float: left;
+    margin-left: 6rpx;
+    width: 200rpx;
+    height: 100rpx;
+    padding: 8rpx;
+    border-radius: 12rpx;
+    background-color: green;
+    color: white;
+    font-size: 36rpx;
+  }
+   
+  .head_train{
+    margin-left:8rpx;
+    float: left;
+    width: 40rpx;
+    height: 110rpx;
+    background-color: #dbdbdb;
+  }
+   
+  .three{
+    width: 160rpx;
+  }
+   
+  .prompt{
+    width: 100%;
+    height: 60rpx;
+    line-height: 60rpx;
+    margin-top: 10rpx;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    box-sizing: border-box;
+    background-color: lightblue;
+    overflow: hidden
+  }
+  .prompt_span{
+    float: left;
+    font-size: 28rpx;
+  }
+  .prompt_first{
+    color: white;
+  }
+  .prompt_second{
+    color: red;
+  }  */

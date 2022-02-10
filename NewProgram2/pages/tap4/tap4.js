@@ -1,11 +1,28 @@
 
 Page({
   data: {
-
-  },
+    sty:0,
+    sty2:0,
+    score: 'darkkhaki', 
+    score2: 'darkkhaki', 
+   },
+   score: function (e) {
+    //点击按钮，样式改变
+    let that = this;
+    that.setData({
+     sty: 1,
+     score: 'rgba(252,178,22, 0.3)'
+    });
+   },
 
   //同步
   pace: function () {
+        //点击按钮，样式改变
+        let that = this;
+        that.setData({
+         sty: 1,
+         score: 'white'
+        });
     wx.cloud.init({
       env: 'cloud1-6g5wybika29da54a'
     })
@@ -73,6 +90,12 @@ Page({
   },
   //上传
   upload: function () {
+        //点击按钮，样式改变
+        let that = this;
+        that.setData({
+         sty2: 1,
+         score2: 'white'
+        });
     var todos = wx.getStorageSync('todo_list') || []
     var todos2 = wx.getStorageSync('todo_list2') || []
     var usedCloths = wx.getStorageSync('usedCloth') || []

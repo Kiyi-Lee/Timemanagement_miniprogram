@@ -11,6 +11,8 @@ App({
     })
   },
   globalData: {
+    hourlog: [],
+    datalog: [],
     logscate: 0,
     userInfo: null,
     canConvert:0,
