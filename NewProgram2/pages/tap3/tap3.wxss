@@ -82,6 +82,7 @@ page {
   margin: 10rpx 0;
   border: 1rpx solid #eee;
   border-radius: 10rpx;
+  height: auto;
 }
 
 

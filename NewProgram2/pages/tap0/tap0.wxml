@@ -1,9 +1,7 @@
 <view class="page-section">
   <movable-area style="width:100%;height:150rpx">
     <movable-view direction="horizontal" style="width:20%;height:150rpx">
-      <image
-        src="https://636c-cloud1-6g5wybika29da54a-1305336167.tcb.qcloud.la/pictures/dancegirl.gif?sign=fbd7f9a983267306d3f49f35044b4f1f&t=1620128855"
-        style="width:150rpx;height:150rpx"></image>
+      <image src="https://636c-cloud1-6g5wybika29da54a-1305336167.tcb.qcloud.la/pictures/dancegirl.gif?sign=fbd7f9a983267306d3f49f35044b4f1f&t=1620128855" style="width:150rpx;height:150rpx"></image>
     </movable-view>
   </movable-area>
   <view class="movebox">
@@ -29,13 +27,13 @@
   <scroll-view scroll-y style="height:510rpx;padding-top:50rpx">
     <view class="chooseBoard">
       <view wx:for="{{boardArr}}" class='cate_item' wx:key="cate" bindtap="clickCate" data-index="{{index}}">
-          <view class="cate_icon" wx:if="{{clothflag[index]!=1}}">
-            <image src="{{item.icon}}"></image>
-          </view>
-          <view class="cate_icon" wx:if="{{clothflag[index]==1}}">
-            <image src="{{array0[index]}}"></image>
-          </view>
-          <view class="cate_text {{index == cateActive ? 'cate_text_active' :''}}">{{item.text}}</view>
+        <view class="cate_icon" wx:if="{{clothflag[index]!=1}}">
+          <image src="{{item.icon}}"></image>
+        </view>
+        <view class="cate_icon" wx:if="{{clothflag[index]==1}}">
+          <image src="{{array0[index]}}"></image>
+        </view>
+        <view class="cate_text {{index == cateActive ? 'cate_text_active' :''}}">{{item.text}}</view>
       </view>
     </view>
   </scroll-view>

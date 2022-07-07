@@ -13,16 +13,5 @@
     <view wx:if="{{sty==1}}">
       <button class="pace" bindtap="pace" style="border-color: {{score}};"><text>同步到本地</text></button>
     </view>
-<!-- <view wx:if="{{sty==0}}">
- <view class="score" style="background-color:{{score}};" catchtap='score'>
-  <text>按钮一</text>
- </view>
-</view>
-<view wx:if="{{sty==1}}">
- <view class="score" style="background-color:{{score}};" catchtap='score'>
-  <text>按钮一</text>
- </view>
-</view> -->
-
   </view>
 </view>

@@ -13,10 +13,9 @@
     </block> -->
   </view>
   <view class="rankboard" hidden="{{!showgetUserinfo}}">
-    <view class="refreshShare" style="display:flex">
-      <button class="refresh" bindtap="refresh">刷新</button>
-      <!-- <image class="shareImg" src="/images/arrow3.png" style="width:66rpx;height:66rpx"/> -->
-    </view>
+    <!-- <view class="refreshShare" style="display:flex">
+      <button class="refresh" bindtap="getUserInfo">刷新</button>
+    </view> -->
     <view class="detail_title_type">
       <text class="{{actionIndex == 0 ?'active':''}} today" data-index="0" bindtap="changeType">日榜</text>
       <text class="{{actionIndex == 1 ?'active':''}} history" data-index="1" bindtap="changeType">总榜</text>

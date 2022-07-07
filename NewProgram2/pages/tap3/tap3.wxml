@@ -1,28 +1,24 @@
 <!--pages/tap3/tap3.wxml-->
-<import src="/pages/tap3/template.wxml"></import>
 
 <view class="container">
   <view class="list_kind">
     <text class="{{actionIndex == 0 ?'active':''}} short" data-index="0" bindtap="changeType">短期清单</text>
     <text class="{{actionIndex == 1 ?'active':''}} long" data-index="1" bindtap="changeType">长期清单</text>
   </view>
-  <!-- <template is="post_list"></template> -->
+
   <view class="header">
     <!-- 小加号图片 -->
     <image class="addimg" bindtap="click" src="../../images2/a2.png"> </image>
     <!-- 添加任务框默认值，输入有改变时inputChangeHandle返回值，点击完成或enter时，添加新的todo(addTodoHandle) -->
-    <input class="new-todo" value="{{ input }}" placeholder="请输入..." placeholder-style="color:#39363d"
-      bindinput="inputChangeHandle" />
+    <input class="new-todo" value="{{ input }}" placeholder="请输入..." placeholder-style="color:#39363d" bindinput="inputChangeHandle" />
   </view>
   <!-- 数组todos长度大于0时显示 -->
 
   <block wx:if="{{ actionIndex==0 ? todos.length : todos2.length}}" class="T1">
     <view class="todos">
-
       <!-- 遍历数组todos，为每个items添加自定义属性data-index，根据completed:ture/flase 来确定是否添加中划线 -->
       <scroll-view scroll-y style="height:{{height}}px;">
-        <view class="item{{ item.completed ? ' completed' : '' }}" wx:for="{{ actionIndex==0 ? todos : todos2 }}" wx:key="{{index}}"
-          bindtap="toggleTodoHandle" data-index="{{index}}">
+        <view class="item{{ item.completed ? ' completed' : '' }}" wx:for="{{ actionIndex==0 ? todos : todos2 }}" wx:key="{{index}}" bindtap="toggleTodoHandle" data-index="{{index}}">
 
           <view class="tick">
             <image src="{{ item.completed ? src1 : src2 }}"></image>
@@ -37,16 +33,16 @@
     </view>
 
     <view class="footer">
-    <view hidden="{{buttonshow}}">
-      <text class="btn" bindtap="toggleAllHandle">全选</text>
-      <text class="notfinsh" wx:if="{{ leftCount }}">待完成 {{ leftCount }}</text>
-      <text class="btn" wx:if="{{ todos.length > leftCount }}" bindtap="clearCompletedHandle">清除已完成</text>
-    </view>
-    <view hidden="{{!buttonshow}}">
-      <text class="btn" bindtap="toggleAllHandle">全选</text>
-      <text class="notfinsh" wx:if="{{ rightCount }}">待完成 {{ rightCount }}</text>
-      <text class="btn" wx:if="{{ todos2.length > rightCount }}" bindtap="clearCompletedHandle">清除已完成</text>
-  </view>
+      <view hidden="{{buttonshow}}">
+        <text class="btn" bindtap="toggleAllHandle">全选</text>
+        <text class="notfinsh" wx:if="{{ leftCount }}">待完成 {{ leftCount }}</text>
+        <text class="btn" wx:if="{{ todos.length > leftCount }}" bindtap="clearCompletedHandle">清除已完成</text>
+      </view>
+      <view hidden="{{!buttonshow}}">
+        <text class="btn" bindtap="toggleAllHandle">全选</text>
+        <text class="notfinsh" wx:if="{{ rightCount }}">待完成 {{ rightCount }}</text>
+        <text class="btn" wx:if="{{ todos2.length > rightCount }}" bindtap="clearCompletedHandle">清除已完成</text>
+      </view>
     </view>
 
 

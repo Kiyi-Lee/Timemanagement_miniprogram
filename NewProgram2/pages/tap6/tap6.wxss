@@ -1,78 +1,70 @@
-/* pages/weather/weather.wxss */
-ec-canvas {
+/* pages/tap6/tap6.wxss */
+page {
   width: 100%;
-  height: 70%;
-  }
-   
-  .container {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    display: flex;
-    flex-direction: column; 
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-  }
-   
-  /* .picker-pos {
-  margin-top: -130rpx;
-  margin-left: 150rpx;
-  color: red;
-  } */
-   
-   
-  /* .head {
-    overflow: hidden;
-    margin: 10rpx;
-  }
-   
-  .head_config {
-    float: left;
-    margin-left: 6rpx;
-    width: 200rpx;
-    height: 100rpx;
-    padding: 8rpx;
-    border-radius: 12rpx;
-    background-color: green;
-    color: white;
-    font-size: 36rpx;
-  }
-   
-  .head_train{
-    margin-left:8rpx;
-    float: left;
-    width: 40rpx;
-    height: 110rpx;
-    background-color: #dbdbdb;
-  }
-   
-  .three{
-    width: 160rpx;
-  }
-   
-  .prompt{
-    width: 100%;
-    height: 60rpx;
-    line-height: 60rpx;
-    margin-top: 10rpx;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-between;
-    box-sizing: border-box;
-    background-color: lightblue;
-    overflow: hidden
-  }
-  .prompt_span{
-    float: left;
-    font-size: 28rpx;
-  }
-  .prompt_first{
-    color: white;
-  }
-  .prompt_second{
-    color: red;
-  }  */
+  height: 100%;
+  overflow: hidden;
+}
+
+.contents {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  flex: 1;
+  width: 660rpx;
+  display: flex;
+  flex-direction: column;
+  margin: 36rpx auto;
+  box-sizing: border-box;
+}
+
+.box>view {
+  /* display: flex; */
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  /* text-align: center; */
+  margin-bottom: 20rpx;
+  border-bottom: 1px solid #ccc;
+  height: auto;
+}
+
+.taptap {
+  display: flex;
+}
+
+.show_icon {
+  margin-right: 0rpx;
+}
+
+.show_icon image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 36rpx;
+  margin: 10rpx auto;
+  font-family: serif;
+  margin-left: 0rpx;
+}
+
+.detail {
+  font-weight: normal;
+  font-size: 30rpx;
+  font-family: '宋体';
+}
+
+.scroll {
+  height: 200rpx;
+}
+
+ad {
+  position: fixed;
+  bottom: 0;
+}

@@ -9,8 +9,7 @@
     "pages/tap3/tap3",
     "pages/tap4/tap4",
     "pages/tap5/tap5",
-    "pages/tap6/tap6",
-    "pages/echart"
+    "pages/tap6/tap6"
   ],
   "window": {
     "backgroundTextStyle": "light",

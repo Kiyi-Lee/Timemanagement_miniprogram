@@ -6,7 +6,7 @@ page {
   overflow: hidden;
 }
 .rankboard {
-  margin: 0 auto;
+  margin: 36rpx auto;
   width: 100%;
   /* font-size: 36rpx; */
 }
@@ -35,13 +35,12 @@ page {
 } */
 .refresh {
   margin: center;
-  margin-top: 30rpx;
   color: #3f51b5;
   border: 1px solid;
   border-radius: 5px;
-  width: 200rpx !important;
-  font-size: 36rpx;
-  line-height: 36rpx;
+  width: 180rpx !important;
+  font-size: 32rpx;
+  line-height: 25rpx;
   background-color: transparent;
 }
 .detail_title_type {

@@ -1,4 +1,3 @@
-
 .maxTime {
   flex: 1;
   margin: 20px auto -10px;
@@ -6,57 +5,65 @@
   font-size: 12px;
   text-align: center;
 }
-.slider{
+
+.slider {
   width: 666rpx;
   margin: 42rpx auto;
   height: 36rpx;
 }
 
-.words{
+.words {
   height: 130rpx;
   margin: 30rpx auto;
   text-align: center;
 }
-.words .firstShow{
+
+.words .firstShow {
   font-size: 35rpx;
   height: 60rpx;
   line-height: 60rpx;
 }
-.words .secondShow{
+
+.words .secondShow {
   font-size: 30rpx;
   height: 50rpx;
   line-height: 50rpx;
-  color:#999999;
+  color: #999999;
 }
 
-.chooseBoard{
+.chooseBoard {
   width: 660rpx;
   display: flex;
   flex-wrap: wrap;
   margin: 0 auto;
- /* height: 330rpx; */
+  /* height: 330rpx; */
 }
-.chooseBoard .cate_item{
+
+.chooseBoard .cate_item {
   flex: 50%;
   /* width: 220rpx; */
   /* height: 175rpx; */
   text-align: center;
   margin-bottom: 20rpx;
 }
-.chooseBoard .cate_item .cate_icon{
+
+.chooseBoard .cate_item .cate_icon {
   height: 130rpx;
 }
-.chooseBoard .cate_item .cate_icon image{
+
+.chooseBoard .cate_item .cate_icon image {
   width: 120rpx;
   height: 120rpx;
 }
-.chooseBoard .cate_item .cate_text{
+
+.chooseBoard .cate_item .cate_text {
   height: 35rpx;
   line-height: 35rpx;
   font-size: 30rpx;
   font-style: normal;
 }
-.chooseBoard .cate_item .cate_text_active{
+
+.chooseBoard .cate_item .cate_text_active {
   color: tomato;
 }
 
@@ -73,40 +80,47 @@
   color: black;
 }
 
-.startAttention{
+.startAttention {
   width: 300rpx;
   height: 90rpx;
-  border: 2rpx solid #8bdbec;
+  border: 2rpx solid #94b5bd;
   border-radius: 20rpx;
   line-height: 90rpx;
   color: #666;
   margin: 39rpx auto;
   text-align: center;
 }
-.startAttention image , .pauseBtn image, .okBtn image,.continueBtn image ,.cancleBtn image{
+
+.startAttention image,
+.pauseBtn image,
+.okBtn image,
+.continueBtn image,
+.cancleBtn image {
   height: 60rpx;
   width: 60rpx;
   vertical-align: middle;
   padding-bottom: 13rpx;
 }
-.clock{
-  background-image:url('https://636c-cloud1-6g5wybika29da54a-1305336167.tcb.qcloud.la/pictures/bg04.jpg?sign=10c77c2a49726d60183eedaa87cac633&t=1621689680');
+
+.clock {
+  background-image: url('https://636c-cloud1-6g5wybika29da54a-1305336167.tcb.qcloud.la/pictures/bg04.jpg?sign=10c77c2a49726d60183eedaa87cac633&t=1621689680');
   background-size: 750rpx auto;
   background-position: left bottom;
   overflow: hidden;
-  background-color:#8bdbec;
+  background-color: #8bdbec;
   border-top: 2rpx solid #eee;
   box-sizing: border-box;
 }
 
-.progress{
+.progress {
   height: 400rpx;
   width: 400rpx;
   margin: 120rpx auto;
   position: relative;
 }
 
-.progress .progress_bg,.progress .progress_active{
+.progress .progress_bg,
+.progress .progress_active {
   position: absolute;
   left: 0;
   top: 0;
@@ -114,7 +128,7 @@
   width: 400rpx;
 }
 
-.progress .progress_text{
+.progress .progress_text {
   position: absolute;
   left: 120rpx;
   top: 170rpx;
@@ -126,7 +140,10 @@
   text-align: center;
 }
 
-.btns .okBtn,.btns .pauseBtn,.btns .continueBtn,.btns .cancleBtn{
+.btns .okBtn,
+.btns .pauseBtn,
+.btns .continueBtn,
+.btns .cancleBtn {
   width: 280rpx;
   height: 80rpx;
   line-height: 80rpx;
@@ -136,7 +153,10 @@
   border-radius: 20rpx;
   margin: 0 auto 20rpx auto;
 }
-.okBtn text,.continueBtn text,.cancleBtn text {
+
+.okBtn text,
+.continueBtn text,
+.cancleBtn text {
   box-sizing: border-box;
   margin-right: 10rpx;
 }

@@ -2,6 +2,7 @@
 var postsData = require('../tap0/source.js');
 const app = getApp()
 const appData = app.globalData
+
 Page({
   /**
    * 页面的初始数据
@@ -24,12 +25,14 @@ Page({
       0,0,0,0,0,0,0],
     timeConvert:  60
   },
+
   onLaunch: function () {
     wx.showShareMenu({
       withShareTicket: true,
       menus: ['shareAppMessage', 'shareTimeline']
     })
   },
+
   onShareAppMessage() {
     const promise = new Promise(resolve => {
       setTimeout(() => {
@@ -45,16 +48,19 @@ Page({
       promise 
     }
   },
+  
   onShow: function () {
-    // var Height = wx.getSystemInfoSync().windowHeight;
     this.setData({
-      boardArr: postsData.boardArr,
       array0: postsData.array0,
-      // height1: Height*0.1,
-      // height2: Height*0.1,
-      // height2: Height*0.8
+      boardArr: postsData.boardArr,
     })
-    var choose = wx.getStorageSync('picChoose') || [];
+    var choose = wx.getStorageSync('picChoose');
+    if (choose) {
+      console.log("choose"+choose)
+      this.setData({
+        pick: choose
+      })
+    }
     var tests = wx.getStorageSync('tests') || [];
     var used = wx.getStorageSync('used') || [];
     var showPic = wx.getStorageSync('showPic') || [];
@@ -66,20 +72,15 @@ Page({
       showPic = this.data.clothflag;
       wx.setStorageSync('showPic', showPic)
     }
-    // wx.removeStorageSync('clothFlag')
     var totalTime = 0;
     if (tests.length > 0) { //如果番茄时钟有数据
-      // console.log("length进来了")
       for (var i = 0; i < tests.length; i++) {
         totalTime = totalTime + parseInt(tests[i].time);
       } //获取总时长
-      // console.log("totalTime:" + totalTime);
       this.setData({
         pertotal: parseInt(totalTime / this.data.timeConvert)
       }) //计算总兑换次数，加載時使用
-      // console.log("this.data.pertotal: " + this.data.pertotal)
       //获取缓存中使用次数，便于计算每次加载可兑换次数
-      // console.log("used:" + used)
       //如果没有兑换过，即used没有数据
       if (used.length <= 0) {
         // console.log("used.length<=0,used:" + used)
@@ -91,39 +92,35 @@ Page({
           canConvert: appData.canConvert,
           //首条数据（没兑换时，used=0）插入，可兑换次数就是总兑换次数
         })
-        // console.log("data的canConvert: " + this.data.canConvert)
-        // console.log("used=null时(0)used= " + used)
-
       } else {
         //used存在数据，即兑换过
-        // console.log("used！=null")
+        var picChoose = wx.getStorageSync('picChoose');
+        // console.log(picChoose)
+        appData.canConvert = this.data.pertotal - this.data.used;
         this.setData({
           used: used,
-        })
-        appData.canConvert = this.data.pertotal - this.data.used;
-        // console.log("!=null,appData.canConvert: " + appData.canConvert)
-        //总兑换次数减去已经兑换的次数，也是数据刷新
-        this.setData({
-          canConvert: appData.canConvert,
+          pick: picChoose,
+          cateActive: picChoose,
+          canConvert: appData.canConvert,//总兑换次数减去已经兑换的次数，也是数据刷新
         })
       }
     }
-    if (choose != null || choose != undefined) {
-      this.setData({
-        pick: choose
-      })
-    }
+    this.clickShow()
   },
 
   clickCate: function (e) {
     this.setData({
       cateActive: e.currentTarget.dataset.index,
     });
+    this.clickShow()
+  },
+
+  clickShow() {
     var usedCloth = wx.getStorageSync('usedCloth') || [];
     if (usedCloth.length > 0) {
       for (var i = 0; i < usedCloth.length; i++) {
         // console.log(usedCloth[i].Pick)
-        if (e.currentTarget.dataset.index==usedCloth[i].Pick) {
+        if (this.data.cateActive==usedCloth[i].Pick) {
           this.setData({
             flag: 1,
             text: "使用"
@@ -136,8 +133,6 @@ Page({
           })
         }
       }
-    } else {
-      //...
     }
   },
 

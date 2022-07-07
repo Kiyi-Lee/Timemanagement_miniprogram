@@ -1,7 +1,4 @@
 {
-  "navigationBarBackgroundColor": "#ecebf0",
-  "navigationBarTitleText": "使用贴士",
-  "usingComponents": {
-    "ec-canvas": "../ec-canvas/ec-canvas"
-  }
+  "usingComponents": {},
+  "navigationBarTitleText": "关于小程序"
 }
