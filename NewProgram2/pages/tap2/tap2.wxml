@@ -1,0 +1,65 @@
+<!-- quadrant--象限 -->
+
+<view class="box1">
+  <view class="view1" style="flex-direction:row;">
+    <view class="Editor1">
+      <scroll-view style="height:360rpx">
+        <editor id="editor1" class="editor1" style="max-height:300rpx" placeholder="请输入..." bindready="onEditorReady1" bindinput="onContentChange1"></editor>
+      </scroll-view>
+    </view>
+    <view class="Editor2">
+      <scroll-view style="height:360rpx">
+        <editor id="editor2" class="editor2" placeholder="请输入..." bindready="onEditorReady2" bindinput="onContentChange2">
+        </editor>
+      </scroll-view>
+    </view>
+  </view>
+  <view class="title1" style="flex-direction:row">
+    <view class="titledisplay1">重要不紧急</view>
+    <view class="titledisplay2">重要且紧急</view>
+  </view>
+  <view class="title2" style="flex-direction:row">
+    <view class="titledisplay3">不重要不紧急</view>
+    <view class="titledisplay4">紧急不重要</view>
+  </view>
+  <view class="view2" style="flex-direction:row;">
+    <view class="Editor3">
+      <scroll-view style="height:360rpx">
+        <editor id="editor3" class="editor3" placeholder="请输入..." bindready="onEditorReady3" bindinput="onContentChange3">
+        </editor>
+      </scroll-view>
+    </view>
+    <view class="Editor4">
+      <scroll-view style="height:360rpx">
+        <editor id="editor4" class="editor4" placeholder="请输入..." bindready="onEditorReady4" bindinput="onContentChange4">
+        </editor>
+      </scroll-view>
+    </view>
+  </view>
+
+  <view class="box">
+    <view class="back" style="padding-top:50rpx">
+      <button class="return" bindtap="return">返回</button>
+    </view>
+    <view>
+      <button class="btn" bindtap="btnTap">点我</button>
+    </view>
+  </view>
+</view>
+
+<page-container show="{{show}}" round="{{round}}" overlay="{{overlay}}" duration="{{duration}}" position="center" close-on-slide-down="{{false}}" custom-style="height: auto;" overlay-style="background-color: rgba(0, 0, 0, 0.7); filter: blur(4px);">
+  <view class="detail-page">
+    <view class="img">
+      <image src="/images2/四象限.png">
+      </image>
+      <text decode="{{true}}" user-select style="color:#3187af">
+        <text style="text-indent:2em;margin-left:60rpx">在人们的日常工作中，很多时候往往有机会去很好地计划和完成一件事。但常常却又没有及时地去做，随着时间的推移，造成工作质量的下降。</text>
+        <text style="margin-left:60rpx"> 因此，应把主要的精力有重点地放在重要但不紧急这个“象限”的事务上是必要的。要把精力主要放在重要但不紧急的事务处理上，需要很好地安排时间。一个好的方法是建立预约。建立了预约，自己的时间才不会被别人所占据，从而有效地开展工作。</text>
+      </text>
+      <button class="close" bindtap="close"><text>关闭</text></button>
+      <view class="blank"></view>
+    </view>
+  </view>
+
+
+</page-container>

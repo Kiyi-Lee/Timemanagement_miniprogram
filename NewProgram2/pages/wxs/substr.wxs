@@ -1,0 +1,8 @@
+var sub = function(val) {
+  if (val.length <=6) {
+    return val;
+  }else {
+    return val.substring(0, 6)+'··';
+  }
+}
+module.exports.sub = sub;

@@ -1,0 +1,13 @@
+<!--pages/Tool/Tool.wxml-->
+<view class="table">
+
+  <view class="chooseBoard">
+    <view class="title">请点击图标，选择项目</view>
+    <view wx:for="{{boardArr}}" class='cate_item' wx:key="cate" bindtap="clickCate" data-index="{{index}}">
+      <view class="cate_icon">
+        <image src="../../images2/{{item.icon}}.png"></image>
+      </view>
+      <view class="cate_text {{index == cateActive ? 'cate_text_active' :''}}">{{item.text}}</view>
+    </view>
+  </view>
+</view>

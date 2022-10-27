@@ -1,0 +1,7 @@
+{
+  "navigationBarTitleText": "统计",
+  "navigationBarBackgroundColor": "#68d6b5",
+  "usingComponents": {
+    "ec-canvas": "../ec-canvas/ec-canvas"
+  }
+}

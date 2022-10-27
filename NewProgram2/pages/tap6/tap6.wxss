@@ -1,0 +1,71 @@
+/* pages/tap6/tap6.wxss */
+page {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.contents {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.box {
+  flex: 1;
+  width: 660rpx;
+  display: flex;
+  flex-direction: column;
+  margin: 20rpx auto;
+  box-sizing: border-box;
+}
+
+.box>view {
+  /* display: flex; */
+  flex: 1;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  /* text-align: center; */
+  margin-bottom: 10rpx;
+  border-bottom: 1px solid #ccc;
+  height: auto;
+}
+
+.taptap {
+  display: flex;
+}
+
+.show_icon {
+  margin-right: 0rpx;
+}
+
+.show_icon image{
+  width: 50rpx;
+  height: 50rpx;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 36rpx;
+  margin: 10rpx auto;
+  font-family: serif;
+  margin-left: 0rpx;
+}
+
+.detail {
+  font-weight: normal;
+  font-size: 30rpx;
+  font-family: '宋体';
+}
+
+.scroll {
+  height: 450rpx;
+}
+
+ad {
+  height: auto;
+  position: fixed;
+  bottom: 0;
+}

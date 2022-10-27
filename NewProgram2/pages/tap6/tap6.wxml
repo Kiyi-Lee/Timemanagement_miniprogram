@@ -1,0 +1,50 @@
+<!--pages/tap6/tap6.wxml-->
+<view class="contents">
+  <view class="box">
+    <view class="forehead">
+      <view class="title">写在前面</view>
+      <view class="detail">
+        <text decode="true" space="nbsp">番茄Todo时间管理小程序是前期个人学习所开发，因此小程序有诸多不足之处，希望大家海涵。</text>
+      </view>
+    </view>
+    <view class="introduce">
+      <view class="taptap">
+        <view class="title">小程序介绍</view>
+        <view class="show_icon" bindtap="display_detail" data-index="show_introduce">
+          <image src="/images2/arrow_down.png"></image>
+        </view>
+      </view>
+      <view class="detail" wx:if="{{show_introduce}}">
+        <text decode="true" space="nbsp">此小程序专注于个人时间管理，以番茄时钟为主体，其它功能为辅助帮助您更高效的安排时间。</text>
+      </view>
+    </view>
+    <view class="update_logs">
+      <view class="taptap">
+        <view class="title">更新记录</view>
+        <view class="show_icon" bindtap="display_detail" data-index="show_logs">
+          <image src="/images2/arrow_down.png"></image>
+        </view>
+      </view>
+      <view class="detail" wx:if="{{show_logs}}">
+        <text decode="true" space="nbsp">增加倒数日删除功能,增加专注时间图表展示,对一些问题进行了修复 2022/06/22</text>
+      </view>
+    </view>
+    <view class="tips">
+      <view class="taptap">
+        <view class="title">使用提示</view>
+        <view class="show_icon" bindtap="display_detail" data-index="show_tips">
+          <image src="/images2/arrow_down.png"></image>
+        </view>
+      </view>
+      <view class="detail" wx:if="{{show_tips}}">
+        <scroll-view scroll-y class="scroll">
+          <text decode="true" space="nbsp">1.为小程序正常运行，在使用番茄时钟时，请不要中途退出小程序\n2.数据同步目前采用手动同步方式，当您使用其它设备时请先在旧设备上传之后再在新设备同步\n3.点击小程序屏幕右上角三个点按钮，可分享小程序给他人\n4.如需添加小程序快捷方式到桌面，需打开微信客户端的创建快捷方式权限方可成功\n5.由于运行成本增加，故只能添加广告以维持小程序平稳运行，由此给您造成的不佳体验深感抱歉，多多谅解！\n</text>
+        </scroll-view>
+      </view>
+    </view>
+  </view>
+
+  <view class="ad">
+    <ad unit-id="adunit-83a6fa5e3461955a"></ad>
+  </view>
+</view>

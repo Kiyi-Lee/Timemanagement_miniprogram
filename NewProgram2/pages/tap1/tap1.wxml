@@ -1,0 +1,73 @@
+<!--pages/tap1/tap1.wxml-->
+<wxs src="../wxs/cutdown_substr.wxs" module="cutdown" />
+
+<!-- 导航栏 -->
+<view class="cutdown" hidden="{{cutdownShow}}">
+  <view class="view1">
+    <view class="text" bindtap="setCutdown">设置新的倒数日<text></text></view>
+    <view class="return2" bindtap="return2">返回</view>
+  </view>
+
+  <!-- 模板信息 -->
+  <modal id="modal" hidden="{{!showmodal}}" title="确认操作" confirm-text="删除" cancel-text="取消" bindcancel="cancel" bindconfirm="delete">
+    <text>是否删除此倒数日？</text>
+  </modal>
+
+<!-- 展示模块 -->
+  <div class="listbox">
+    <view class="detail_list" wx:if="{{cutdownList.length > 0}}">
+      <view class="tip" wx:if="{{cutdownList.length > 0}}">点击可删除相应倒数日</view>
+      <scroll-view scroll-y style="height:{{height2}}px;">
+        <view class="list_item" wx:for="{{cutdownList}}">
+          <div class="listshow" style="color:{{item.Daysum <0 ? 'grey':''}};display:flex;width:100%" data-index="{{index}}" catchtap="option">
+            <sapn class="span1" style="font-size:45rpx;color:{{item.Daysum <0 ? '#BEBEBE':'rgb(206, 11, 76)'}};font-weight:{{item.Daysum<0 ? 'none' : 'bold'}};margin-right:5rpx;width:15%">
+              距离</sapn>
+            <sapn class="span2" style="font-size:30rpx;color:{{item.Daysum <0 ? '#BEBEBE':'rgb(10, 150, 155)'}};width:35%;">
+              {{item.Year}}年{{item.Month}}月{{item.Day}}日</sapn>
+            <sapn class="span3" style="font-size:30rpx;color:{{item.Daysum <0 ? '#BEBEBE':'rgb(179 32 118)'}};width:25%;">
+              {{item.CutdownName}}</sapn>
+            <sapn class="span4" style="font-size:30rpx;color:{{item.Daysum <0 ? '#BEBEBE':'rgb(26 20 99)'}};width:25%">
+              {{cutdown.sub(item.Daysum)}}天</sapn>
+          </div>
+        </view>
+      </scroll-view>
+    </view>
+
+    <view class="detail_list" wx:if="{{cutdownList.length == 0}}">暂无数据</view>
+  </div>
+</view>
+
+<!-- 倒计时设置模块 -->
+<view class="cutdownSet" style="height:100%" hidden="{{!cutdownShow}}">
+  <view class="container">
+    <view class="page-body">
+    <!-- 日期选择器顶部文字显示 -->
+      <view class="selected-date" style="text-align:center; height:60rpx">
+        {{year}}年{{month}}月{{day}}日
+      </view>
+      <!-- 日期选择器 -->
+      <picker-view indicator-style="height: 90rpx;" style="width: 500rpx; height: 400rpx;text-align:center;margin:center" mask-style="background:transparent;z-index:0;" 
+      value="{{value}}" bindchange="bindChange">
+        <picker-view-column style="flex:0 0 40%">
+          <view wx:for="{{years}}" wx:key="{{years}}" style="line-height: 90rpx; text-align: center;">{{item}}年</view>
+        </picker-view-column>
+        <picker-view-column style="flex:0 0 30%">
+          <view wx:for="{{months}}" wx:key="{{months}}" style="line-height: 90rpx; text-align: center;">{{item}}月</view>
+        </picker-view-column>
+        <picker-view-column style="flex:0 0 30%">
+          <view wx:for="{{days}}" wx:key="{{days}}" style="line-height: 90rpx; text-align: center;">{{item}}日</view>
+        </picker-view-column>
+      </picker-view>
+    </view>
+  </view>
+
+  <!-- 表单，提交倒计时名称 -->
+  <form bindsubmit="formSubmit" bindreset="formReset">
+    <input name="cutdownName" class="cutdownName" placeholder="设置倒数日名称" placeholder-style="height:60rpx;color:#B0C4DE;width:100%;text-align:center;padding-bottom:60rpx" style="color:black" />
+    <button class="btn btn1" formType="submit" type="primary" style="border: 3rpx solid #ffffff;">提交</button>
+    <button class="btn btn2" formType="reset" style="border: 3rpx solid #ffffff;">重置</button>
+    <view class="clearbox"></view>
+  </form>
+  <!-- 顶部返回 -->
+  <view class="return" bindtap="return"><text></text>返回</view>
+</view>

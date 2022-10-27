@@ -1,0 +1,140 @@
+.sum {
+  width: 750rpx;
+  height: 350rpx;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  border: 10rpx solid #eeeeee;
+}
+
+.sum .sum_item {
+  width: 375rpx;
+  height: 160rpx;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  border-bottom: 1rpx solid #ccc;
+  border-right: 1rpx solid #ccc;
+  box-sizing: border-box;
+}
+
+.sum .sum_item_title {
+  font-size: 36rpx;
+  color: #000;
+}
+
+.sum .sum_item_val {
+  height: 40rpx;
+  line-height: 40rpx;
+  padding: 15rpx 0;
+  color: #000;
+}
+
+.detail {
+  width: 700rpx;
+  margin: 0 auto;
+}
+
+.detail_title {
+  display: flex;
+  height: 60rpx;
+  line-height: 60rpx;
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.detail_title .detail_title_text {
+  flex: 1;
+  font-size: 36rpx;
+}
+
+.detail_title .detail_title_text image {
+  height: 60rpx;
+  width: 60rpx;
+  vertical-align: middle;
+  padding-bottom: 13rpx;
+}
+
+.detail_title .detail_title_type {
+  flex: 1;
+  text-align: right;
+  /* font-size: 25rpx; */
+  font-size: 35rpx;
+}
+
+.detail_title .detail_title_type text {
+  padding-left: 12rpx;
+}
+
+.active {
+  color: #42e4e4;
+}
+
+.detail .detail_list {
+  font-size: 30rpx;
+  text-align: left;
+  display: block;
+}
+
+.list_item {
+  display: flex;
+  height: 40rpx;
+  line-height: 40rpx;
+  margin-bottom: 10px;
+  border-bottom: 1px solid #eee;
+}
+
+.list_item .list_item_date {
+  width: 300rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.list_item .list_item_cate {
+  width: 200rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.list_item .list_item_time {
+  width: 200rpx;
+  font-size: 30rpx;
+  text-align: center;
+}
+
+.echarts{
+  position: relative;
+  width: 100%;
+  height: 500rpx;
+  /* margin:0 auto; */
+}
+
+#mychart-dom-pie {
+  position: relative;
+  width: 600rpx;
+  height: 400rpx;
+}
+
+.tip ,.ad_tip {
+  text-align: center;
+  font-size: 30rpx;
+  color: #999999;
+  margin-top: 15rpx;
+}
+
+.ad_tip {
+  margin: 30rpx auto;
+}
+
+.btn {
+  padding: 0;
+  height: 60rpx;
+  width: 450rpx !important;
+  align-content: center;
+  color: #000;
+  background-color: transparent;
+  font-weight: 400;
+  border: 1px solid #080808;
+  margin: 50rpx auto;
+}

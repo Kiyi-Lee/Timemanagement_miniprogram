@@ -1,0 +1,188 @@
+/* pages/tap1/tap1.wxss */
+page {
+  background-image: url('https://636c-cloud1-6g5wybika29da54a-1305336167.tcb.qcloud.la/pictures/bg52.jpg?sign=6e7805d71cf89f5274d83af2866894a7&t=1622258322');
+  background-size: 100% auto;
+  background-position: left bottom;
+  overflow: hidden;
+}
+
+.cutdown {
+  width: 100%;
+  height: 100%;
+  /* position: relative; */
+  display: block;
+  border-top: 2rpx solid #fff;
+  overflow: hidden;
+  padding-top: 30rpx;
+}
+
+.tip {
+  font-size: 30rpx;
+  height: 50rpx;
+  line-height: 50rpx;
+  color: #999999;
+  text-align: center;
+  /* margin-top: 5rpx; */
+  /* margin-bottom: 5rpx; */
+}
+
+.text {
+  float: right;
+  z-index: 1;
+  font-size: 39rpx;
+  text-align: center;
+  width: 320rpx;
+  height: 50rpx;
+  align-content: center;
+  color: #000;
+  line-height: 50rpx;
+  border: 1px solid #77acef;
+  border-radius: 5px;
+  box-shadow: 1px 1px 2px #ccc;
+  margin-right: 10rpx;
+}
+
+.text text {
+  display: inline-block;
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: 0rpx;
+  border: 3rpx solid #000;
+  border-left: 0;
+  border-bottom: 0;
+  margin-left: 0rpx;
+  transform: rotate(45deg);
+}
+
+.return2 {
+  float: left;
+  z-index: 1;
+  /* position: absolute; */
+  left: 20rpx;
+  width: 100rpx;
+  height: 50rpx;
+  /* line-height: 50rpx; */
+  font-size: 36rpx;
+  text-align: center;
+  border-radius: 5px;
+  border: 1px solid #77acef;
+  box-shadow: 1px 1px 2px #ccc;
+  margin-left: 10rpx;
+}
+
+.listbox {
+  display: block;
+  height: 80%;
+  width: 100%;
+}
+
+.detail_list {
+  margin-top: 50rpx;
+  padding-top: 10rpx;
+  width: 100%;
+  height: 80%;
+  font-size: 30rpx;
+  text-align: left;
+  font-size: 45rpx;
+}
+
+.list_item {
+  width: 100%;
+  height: 5%;
+  line-height: 40rpx;
+  margin: 50rpx 0;
+  border-bottom: 1px solid #eee;
+  display: flex;
+}
+
+.cutdownSet {
+  height: 100%;
+  width: 100%;
+  margin: 0rpx auto;
+}
+
+.cutdownSet .container {
+  margin: 0 0;
+  border-top: 1rpx solid #fff;
+  padding: 110rpx 0;
+}
+
+.cutdownSet .container .page_body {
+  text-align: center;
+}
+
+.cutdownSet form {
+  padding: 0 20rpx;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  clear: both;
+  position: relative;
+}
+
+.cutdownSet .btn {
+  padding: 0;
+  height: 60rpx;
+  width: 150rpx;
+  align-content: center;
+  color: #000;
+  background-color: transparent;
+  font-weight: 400;
+}
+
+.cutdownSet .btn1 {
+  float: left;
+}
+
+.cutdownSet .btn2 {
+  float: right;
+}
+
+.clearbox {
+  clear: both;
+}
+
+.return {
+  position: fixed;
+  top: 30rpx;
+  left: 10rpx;
+  text-align: center;
+  height: 50rpx;
+  width: 125rpx;
+  font-size: 36rpx;
+  line-height: 50rpx;
+  border: 1px solid #77acef;
+  border-radius: 8px;
+  box-shadow: 1px 1px 2px #ccc;
+}
+
+.return text {
+  display: inline-block;
+  width: 20rpx;
+  height: 20rpx;
+  margin-left: -10rpx;
+  border: 3rpx solid #000;
+  border-right: 0;
+  border-bottom: 0;
+  transform: rotate(-45deg);
+}
+
+.cutdownName {
+  flex: 1;
+  padding-bottom: 10rpx;
+  margin-bottom: 90rpx;
+  border-bottom: 1px solid #eee;
+  /* border-radius: 5px; */
+  color: #ccc;
+  text-align: center;
+  white-space: wrap;
+}
+
+.span1,
+.span2,
+.span3,
+.span4,
+.span5 {
+  text-align: left;
+}

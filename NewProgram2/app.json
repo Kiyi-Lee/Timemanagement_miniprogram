@@ -1,0 +1,45 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/logs/logs",
+    "pages/Tool/Tool",
+    "pages/tap0/tap0",
+    "pages/tap1/tap1",
+    "pages/tap2/tap2",
+    "pages/tap3/tap3",
+    "pages/tap4/tap4",
+    "pages/tap5/tap5",
+    "pages/tap6/tap6"
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#8bdbec",
+    "navigationBarTitleText": "Weixin",
+    "navigationBarTextStyle": "black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json",
+  "tabBar": {
+    "selectedColor": "#000000",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "计时",
+        "iconPath": "./images2/jishi2.png",
+        "selectedIconPath": "./images2/jishi.png"
+      },
+      {
+        "pagePath": "pages/logs/logs",
+        "text": "统计",
+        "iconPath": "./images2/tongji2.png",
+        "selectedIconPath": "./images2/tongji.png"
+      },
+      {
+        "pagePath": "pages/Tool/Tool",
+        "text": "工具箱",
+        "iconPath": "./images2/toolBox1.png",
+        "selectedIconPath": "./images2/toolBox2.png"
+      }
+    ]
+  }
+}
