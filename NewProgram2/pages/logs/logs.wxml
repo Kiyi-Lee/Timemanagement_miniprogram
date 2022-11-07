@@ -25,23 +25,18 @@
     </view>
   </scroll-view>
   <view class="detail_list" wx:if="{{list.length == 0  && actionIndex!=2}}">暂无数据</view>
-  <view class="echarts" wx:if="{{actionIndex==2 && show_echart[0].display==true}}">
+  <view class="echarts" wx:if="{{actionIndex==2}}">
     <view style="display: flex;justify-content: space-around;font-size: 35rpx;margin-top: 40rpx;">
-      <view data-type_index="0" style="color:{{type_index==0?'blue':''}}" bindtap="changeChart">折线图</view>
+      <view data-type_index="0" style="color:{{type_index==0?'blue':''}}" bindtap="changeChart">折线图(最近七日)</view>
       <!-- <view data-type_index="1" style="color:{{type_index==1?'blue':''}}" bindtap="changeChart">柱状图</view> -->
-      <view data-type_index="1" style="color:{{type_index==1?'blue':''}}" bindtap="changeChart">饼图</view>
+      <view data-type_index="1" style="color:{{type_index==1?'blue':''}}" bindtap="changeChart">饼图(今日专注)</view>
     </view>
     <view class="tip" wx:if="{{line_data.length>0 && type_index == 0}}">最近七日专注数据展示(分钟)</view>
     <view class="tip" wx:if="{{line_data.length<=0 && type_index == 0}}">最近七日还没有专注哦！</view>
     <view class="tip" wx:if="{{pieList.length<=0 && type_index == 1}}">今日还没有专注哦！</view>
     <view class="tip" wx:if="{{pieList.length>0 && type_index == 1}}">今日专注数据展示(分钟)</view>
-    <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}">
+    <ec-canvas id="mychart-dom-pie" canvas-id="mychart-pie" ec="{{ ec }}" wx:if="{{pieList.length>0 || line_data.length>0}}">
     </ec-canvas>
   </view>
-  <view class="echarts" wx:if="{{actionIndex==2 && show_echart[0].display==false}}">
-    <button class="btn" bindtap="unlock">观看广告，解锁图表功能</button>
-    <!-- <button class="btn" bindtap="unlock" wx:if="{{type=='phone'}}">观看广告，解锁图表功能</button>
-    <button class="btn" bindtap="unlock" open-type="share" wx:if="{{type=='other'}}">观看广告，解锁图表功能</button> -->
-    <view class="ad_tip">一次解锁，全天可用</view>
-  </view>
+
 </view>

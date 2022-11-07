@@ -100,58 +100,58 @@ Page({
   //   wx.setStorageSync('tests', tests);
   // },
 
-  show_ad() {
-    // 在页面中定义激励视频广告
-    let videoAd = null
-    // 在页面onLoad回调事件中创建激励视频广告实例
-    if (wx.createRewardedVideoAd) {
-      videoAd = wx.createRewardedVideoAd({
-        adUnitId: 'adunit-14c7b41710947071'
-      })
-      videoAd.onLoad(() => { })
-      videoAd.onError((err) => { })
-      videoAd.onClose((res) => {
-        console.log('ad close')
-        if (res && res.isEnded) {
-          this.close_options()
-        } else {
-          wx.showToast({
-            title: '解锁失败',
-            icon: "error",
-            duration: 1200
-          })
-        }
-      })
-    }
+  // show_ad() {
+  //   // 在页面中定义激励视频广告
+  //   let videoAd = null
+  //   // 在页面onLoad回调事件中创建激励视频广告实例
+  //   if (wx.createRewardedVideoAd) {
+  //     videoAd = wx.createRewardedVideoAd({
+  //       adUnitId: 'adunit-14c7b41710947071'
+  //     })
+  //     videoAd.onLoad(() => { })
+  //     videoAd.onError((err) => { })
+  //     videoAd.onClose((res) => {
+  //       console.log('ad close')
+  //       if (res && res.isEnded) {
+  //         this.close_options()
+  //       } else {
+  //         wx.showToast({
+  //           title: '解锁失败',
+  //           icon: "error",
+  //           duration: 1200
+  //         })
+  //       }
+  //     })
+  //   }
 
-    // 用户触发广告后，显示激励视频广告
-    if (videoAd) {
-      videoAd.show().catch(() => {
-        // 失败重试
-        videoAd.load()
-          .then(() => videoAd.show())
-          .catch(err => {
-            console.log('激励视频 广告显示失败')
-          })
-      })
-    }
-  },
+  //   // 用户触发广告后，显示激励视频广告
+  //   if (videoAd) {
+  //     videoAd.show().catch(() => {
+  //       // 失败重试
+  //       videoAd.load()
+  //         .then(() => videoAd.show())
+  //         .catch(err => {
+  //           console.log('激励视频 广告显示失败')
+  //         })
+  //     })
+  //   }
+  // },
 
-  close_options() {
-    var echarts = [
-      {
-        display: true,
-        time: recent7days.formatDate(new Date())
-      }
-    ];
-    this.setData({
-      show_echart: echarts
-    })
-    var show_echart = wx.getStorageSync('show_echart');
-    show_echart = this.data.show_echart;
-    wx.setStorageSync('show_echart', show_echart);
-    this.line()
-  },
+  // close_options() {
+  //   var echarts = [
+  //     {
+  //       display: true,
+  //       time: recent7days.formatDate(new Date())
+  //     }
+  //   ];
+  //   this.setData({
+  //     show_echart: echarts
+  //   })
+  //   var show_echart = wx.getStorageSync('show_echart');
+  //   show_echart = this.data.show_echart;
+  //   wx.setStorageSync('show_echart', show_echart);
+  //   this.line()
+  // },
 
   // getSysInfo() {
   //   var that = this
@@ -241,6 +241,14 @@ Page({
       dateLast: dateLast
     });
     this.get_week_data()
+    if(this.data.actionIndex==2){
+      this.setData({
+        type_index: 0
+      })
+      this.line();
+      console.log("init line")
+    }
+      
   },
 
   get_week_data() {
@@ -261,8 +269,8 @@ Page({
             if (tests[j].date.substr(5, 5) == dateLast[i]) {
               // 如果当前日志数组元素date属性不是未定义 
               // 且 当前日志数组元素date规范后等于当前七天数组元素 ，即日期相等时计算当日专注时间
-              time_count += tests[j].time // 每日专注时间相加
-              arrays[i] = time_count
+              time_count += parseInt(tests[j].time) // 每日专注时间相加
+              arrays[i] = parseInt(time_count)
               // console.log("当天:" + time_count+'    j:'+j+'    i:'+i)
               flag = j
             } else {
@@ -271,7 +279,7 @@ Page({
               // 即日期相等时计算当日专注时间
               // 再插入每日专注时间数组即y轴数据，然后退出本次循环
               // arrays.unshift(time_count)
-              arrays[i] = time_count
+              arrays[i] = parseInt(time_count)
               flag = j
               // console.log("break_j:"+j+"   i:"+i)
               // console.log(arrays)
@@ -373,18 +381,17 @@ Page({
         type_index: 0
       })
     } else {
-      if (this.data.show_echart[0].display == true)
         this.line()
     }
   },
 
-  unlock() {
-    // if(this.data.type == 'phone')
-    //   this.show_ad()
-    // else
-    //   this.onShareAppMessage()
-    this.show_ad()
-  },
+  // unlock() {
+  //   // if(this.data.type == 'phone')
+  //   //   this.show_ad()
+  //   // else
+  //   //   this.onShareAppMessage()
+  //   this.show_ad()
+  // },
 
   // 展示对应数据
   pushlist: function () {
@@ -425,18 +432,12 @@ Page({
   changeChart(e) {
     // console.log(e)
     if (e.currentTarget.dataset.type_index == 0) {
-      if (this.data.show_echart[0].display == true) {
-        this.line()
-        // console.log("---------------------")
-      }
+      this.line()
       this.setData({
         type_index: 0
       })
     } else {
-      if (this.data.show_echart) {
-        // console.log("|||||||||||||||||||||||||")
         this.pushPie()
-      }
       this.setData({
         type_index: 1
       })
@@ -449,6 +450,7 @@ Page({
     // })
     // var data_x = this.data.histogramData1;
     // var data_y = this.data.histogramData2;
+    if(this.data.line_data.length>0){
     var data_x = this.data.dateLast;
     var data_y = this.data.line_data;
     option = {
@@ -474,8 +476,9 @@ Page({
     }
     setTimeout(() => {
       chart.setOption(option, true);
-    }, 500);
+    }, 800);
     // chart.setOption(option, true);
+    }
   },
 
   bar() {
